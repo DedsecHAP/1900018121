@@ -1,62 +1,66 @@
-<!doctype html>
+
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Belajar Form</title>
+	<title>Mengirim Form Dengan GET</title>
+	<style>
+		body {
+			font-family: "segoe ui";
+		}
+		h1 {
+			font-size: 25px;
+		}
+		div {
+			margin-bottom: 5px;
+		}
+		input {
+			border: 1px solid #CCCCCC;
+			padding: 10px;
+			margin-left: 20px;
+			font-size: 14px;
+		}
+		input[type="submit"] {
+			padding: 7px 15px;
+			margin-left: 70px;
+			cursor: pointer;
+		}
+		label {
+			width: 70px;
+			display: block;
+			float: left;
+		}
+		body form{
+			padding:20 20 20 20;
+			position: relative;
+			left: 30%;
+		}
+	</style>
 </head>
 <body>
-	<div>
-		<h1>Buat Akun Baru</h1>	
-		<table width="317" height="316">
-		<form action="#" method="get">		  
-			<tbody>
-				<tr>
-				  <td width="111">Username</td>
-				  <td width="190"><input type="text" name="textfield" id="textfield"></td>
-				</tr>
-				<tr>
-				  <td>Password</td>
-				  <td><input type="password" name="password" id="password"></td>
-				</tr>
-				<tr>
-				  <td>Email</td>
-				  <td><input type="email" name="email" id="email"></td>
-				</tr>
-				<tr>
-				  <td>Jenis Kelamin</td>
-				  <td>
-					<input type="radio" name="jenis_kelamin" value="laki">
-	              		 	<label for="laki">Laki-Laki</label>
-					<input type="radio" name="jenis_kelamin" value="perempuan">
-					<label for="Perempuan">Perempuan</label>
-				  </td>
-				</tr>
-				<tr>
-				  <td>Umur</td>
-				  <td><input type="number" name="number" id="number"></td>
-				</tr>
-				<tr>
-				  <td>Asal Kota</td>
-				  <td>
-					<select name="select" id="select">
-						<option value="">Pilih</option>
-						<option value="">Yogyakarta</option>
-						<option value="">Jakarta</option>
-						<option value="">Bandung</option>
-					</select>
-				  </td>
-				</tr>
-				<tr>
-				  <td>Alamat</td>
-				  <td><textarea name="textarea" id="textarea"></textarea></td>
-				</tr>
-				<tr>
-				  <td></td>
-				  <td><input type="submit" name="submit" id="submit" value="Submit"></td>
-				</tr>
-		  </tbody>
-		</form>
-		</table>
-	</div>
+	<form action="Tabel.php" method="GET">
+	<h1 style="margin-bottom: 50px; margin-left: 20px;">Silahkan Isi Form</h1>
+		<div>
+			<label>Nama</label><input type="text" name="innama" id="nama">
+		</div>
+		<div>
+			<label>NIM</label><input type="text" name="innim" id="nim" maxlength="10">
+		</div>
+		<div>
+			<label>Jurusan</label><input type="text" id="jurusan" name="injurusan">
+		</div>
+		<div>
+			<label>Angkatan</label><input type="text" id="angkatan" name="inangkatan">
+		</div>
+		<div>
+		<div>
+			<label>Umur</label><input type="text" name="inumur" id="umur" maxlength="2">
+		</div>
+			<label>Jenis Kelamin</label><br><input type="radio" required="" name="jenis_kelamin" value="laki-laki">Laki-Laki<input type="radio" name="jenis_kelamin" value="Perempuan">Perempuan
+		</div>
+		<div>
+			<label>Alamat</label><input style="height: 100px;" type="text" name="inalamat">
+		</div>
+		<div style="clear: both;"></div>
+		<input type="submit" name="submit" value="Simpan"/>
+	</form>
 </body>
 </html>
